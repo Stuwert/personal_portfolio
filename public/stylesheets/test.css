@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box; }
+
+.fixed, header, footer {
+  position: fixed;
+  height: 5vh;
+  left: 0;
+  right: 0;
+  min-height: 20px;
+  background-color: white; }
+
+header {
+  top: 0; }
+
+nav {
+  height: auto; }
+  nav ul {
+    height: 5vh; }
+  nav li {
+    display: inline-block;
+    width: 25vw;
+    border-width: 0 1px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    height: 16px;
+    vertical-align: middle;
+    margin-top: 1vh; }
+    nav li a {
+      text-decoration: none;
+      font-size: 16px; }
+
+main {
+  position: absolute;
+  top: 5vh;
+  z-index: -1; }
+  main .last {
+    height: 5vh; }
+
+section {
+  height: 90vh;
+  width: 100vw;
+  background-color: red;
+  border-top: 1px solid black;
+  position: relative; }
+  section .lower {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 125px;
+    display: flex;
+    justify-content: space-between; }
+    section .lower ul {
+      text-align: right;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-right: 10px; }
+      section .lower ul li {
+        font-size: 20px; }
+    section .lower h1 {
+      font-size: 120px; }
+
+footer {
+  bottom: 0; }
+
+/*# sourceMappingURL=test.css.map */

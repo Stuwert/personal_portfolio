@@ -1,0 +1,86 @@
+$toolbar-height: 5vh;
+$font-size: 16px;
+
+*{
+  box-sizing: border-box;
+}
+
+.fixed {
+  position: fixed;
+  height: $toolbar-height;
+  left: 0;
+  right: 0;
+  min-height: 20px;
+  background-color: white;
+}
+header {
+  top: 0;
+  @extend .fixed;
+}
+
+nav{
+  height: auto;
+  ul{
+    height: $toolbar-height;
+  }
+  li{
+    display: inline-block;
+    width: 25vw;
+    border-width: 0 1px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    height: $font-size;
+    vertical-align: middle;
+    margin-top: 1vh;
+    a{
+      text-decoration: none;
+      font-size: $font-size;
+    }
+  }
+}
+
+main{
+  position: absolute;
+  top: $toolbar-height;
+  z-index: -1;
+  .last{
+    height: $toolbar-height;
+  }
+}
+
+section{
+  height: 90vh;
+  width: 100vw;
+  background-color: red;
+  border-top: 1px solid black;
+  position: relative;
+  .lower{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 125px;
+    display: flex;
+    justify-content: space-between;
+    ul{
+      text-align: right;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-right: 10px;
+      li{
+        font-size: 20px;
+      }
+    }
+    h1{
+      font-size: 120px;
+    }
+  }
+}
+
+footer{
+  bottom: 0;
+  @extend .fixed;
+}
