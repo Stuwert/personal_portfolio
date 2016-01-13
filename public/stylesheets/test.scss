@@ -5,6 +5,10 @@ $font-size: 16px;
   box-sizing: border-box;
 }
 
+div{
+  overflow: auto;
+}
+
 .fixed {
   position: fixed;
   height: $toolbar-height;
@@ -22,6 +26,12 @@ nav{
   height: auto;
   ul{
     height: $toolbar-height;
+  }
+  li:first-of-type{
+    border-left-width: 0;
+  }
+  li:last-of-type{
+    border-right-width: 0;
   }
   li{
     display: inline-block;
@@ -42,22 +52,60 @@ nav{
 
 main{
   position: absolute;
-  top: $toolbar-height;
   z-index: -1;
-  .last{
-    height: $toolbar-height;
-  }
 }
 
 section{
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   background-color: red;
   border-top: 1px solid black;
   position: relative;
+  padding: $toolbar-height 0;
+  .upper{
+    width: 60%;
+    position: absolute;
+    top: $toolbar-height;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h2{
+      font-size: 50px;
+      margin: 20px;
+      text-decoration: underline;
+    }
+    p{
+      text-align: right;
+      font-size: 28px;
+      line-height: 1.5;
+      float: right;
+      margin: 20px 20px 0 0;
+    }
+    h4{
+      margin: 20px;
+      text-align: right;
+      font-size: 30px;
+      float: right;
+    }
+    ul{
+      float: right;
+      margin: 20px;
+      a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        text-align: right;
+      }
+      li{
+        margin: 20px 0;
+        text-align: right;
+      }
+    }
+  }
   .lower{
     position: absolute;
-    bottom: 0;
+    bottom: $toolbar-height;
     right: 0;
     left: 0;
     height: 125px;
@@ -83,4 +131,38 @@ section{
 footer{
   bottom: 0;
   @extend .fixed;
+  p{
+    text-align: center;
+  }
+}
+
+
+
+
+#portfolio{
+  display: flex;
+  flex-flow: row;
+  div{
+    width: 50%;
+    height: 50%;
+  }
+  .middle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    [class^=portfolio]{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      margin: 2%;
+      height: 96%;
+      width: 96%;
+      background-color: white;
+      border-radius: 15px;
+    }
+  }
+  .lower{
+    width: 100%;
+  }
 }

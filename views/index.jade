@@ -5,45 +5,55 @@ block content
     nav 
       ul
         li
-          a(href='#') Home
+          a(href='#home') Home
         li
-          a(href='#') About
+          a(href='#about') About
         li
-          a(href='#') Blog
+          a(href='#blog') Blog
         li
-          a(href='#') Portfolio
+          a(href='#portfolio') Portfolio
   footer
     p Copyright Stuart Urback 2016.
   main
-    section
+    section#home
       div.lower
         h1 Stuart Urback
         ul
           li Game Design
           li Project Management
           li Web development
-    section
+    section#about
       div.upper
         h2 About Me
-        p 
+        p Hi, I'm Stuart!
+        p I'm a Full Stack Developer/student with a variety of experience leading projects, developing websites 'front-end and server side', and doing design work.  I'm driven by my values and I look for relationships that will help me learn and grow.
+        p If you swipe right, you can find out more about my #[a(href='#') values], #[a(href='#') goals], and #[a(href='#') top 10s].
       div.lower
-    section
+    section#blog
       div.upper
         h2 The Latest 
         //- This will auto populate
         h4 Title 
         p Bing Bong
-    section
+      div.lower
+        p Writing is a key part of who I am.  Click to find out more about me.
+    section#portfolio
       div.upper
         h2 What I've Done
-        a(href='#') Github
-        a(href='#') Codepen
+        ul
+          li
+            a(href='#') Codepen
+          li
+            a(href='#') LinkedIn
+          li
+            a(href='#') Github
       div.middle
-        div 
-        div
-        div
-        div
-      div.lower
+        each val in [1, 2, 3, 4]
+          div.holder
+            div(class='portfolio-#{val}')
+              img(src='http://placehold.it/40x40')
+              h4 Title
+              p Content
         h4 Drag to Learn more
-        div
-    div.last
+      div.lower
+        div.holder.final
