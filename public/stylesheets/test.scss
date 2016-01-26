@@ -1,176 +1,184 @@
-$toolbar-height: 5vh;
-$font-size: 16px;
-
-*{
-  box-sizing: border-box;
-}
-
-div{
-  overflow: auto;
-}
-
-.fixed {
-  position: fixed;
-  height: $toolbar-height;
-  left: 0;
-  right: 0;
-  min-height: 20px;
-  background-color: white;
-}
-header {
-  top: 0;
-  @extend .fixed;
-}
-
-nav{
-  height: auto;
-  ul{
-    height: $toolbar-height;
-  }
-  li:first-of-type{
-    border-left-width: 0;
-  }
-  li:last-of-type{
-    border-right-width: 0;
-  }
-  li{
-    display: inline-block;
-    width: 25vw;
-    border-width: 0 1px;
-    border-color: black;
-    border-style: solid;
-    text-align: center;
-    height: $font-size;
-    vertical-align: middle;
-    margin-top: 1vh;
-    a{
-      text-decoration: none;
-      font-size: $font-size;
-    }
-  }
-}
-
-main{
-  position: absolute;
-  z-index: -1;
-}
-
-section{
-  height: 100vh;
-  width: 100vw;
+.section{
   background-color: red;
-  border-top: 1px solid black;
-  position: relative;
-  padding: $toolbar-height 0;
-  .upper{
-    width: 60%;
-    position: absolute;
-    top: $toolbar-height;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    h2{
-      font-size: 50px;
-      margin: 20px;
-      text-decoration: underline;
-    }
-    p{
-      text-align: right;
-      font-size: 28px;
-      line-height: 1.5;
-      float: right;
-      margin: 20px 20px 0 0;
-    }
-    h4{
-      margin: 20px;
-      text-align: right;
-      font-size: 30px;
-      float: right;
-    }
-    ul{
-      float: right;
-      margin: 20px;
-      a{
-        text-decoration: none;
-        color: black;
-        font-size: 20px;
-        text-align: right;
-      }
-      li{
-        margin: 20px 0;
-        text-align: right;
-      }
-    }
-  }
-  .lower{
-    position: absolute;
-    bottom: $toolbar-height;
-    right: 0;
-    left: 0;
-    height: 125px;
-    display: flex;
-    justify-content: space-between;
-    ul{
-      text-align: right;
-      height: inherit;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      margin-right: 10px;
-      li{
-        font-size: 20px;
-      }
-    }
-    h1{
-      font-size: 120px;
-    }
-  }
-}
-
-footer{
-  bottom: 0;
-  @extend .fixed;
-  p{
-    text-align: center;
-  }
-}
-
-
-
-
-#portfolio{
-  display: flex;
-  flex-flow: row;
-  div{
-    width: 50%;
-    height: 50%;
-  }
-  .middle{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    [class^=portfolio]{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      margin: 2%;
-      height: 96%;
-      width: 96%;
-      background-color: white;
-      border-radius: 15px;
-    }
-  }
-  .lower{
-    width: 100%;
-  }
-}
-
-
-.slide{
   height: 100vh;
   width: 100vw;
-  border: 1px solid black;
-  border-width: 0 1px;
 }
+
+// $toolbar-height: 5vh;
+// $font-size: 16px;
+//
+// *{
+//   box-sizing: border-box;
+// }
+//
+// div{
+//   overflow: auto;
+// }
+//
+// .fixed {
+//   position: fixed;
+//   height: $toolbar-height;
+//   left: 0;
+//   right: 0;
+//   min-height: 20px;
+//   background-color: white;
+// }
+// header {
+//   top: 0;
+//   @extend .fixed;
+// }
+//
+// nav{
+//   height: auto;
+//   ul{
+//     height: $toolbar-height;
+//   }
+//   li:first-of-type{
+//     border-left-width: 0;
+//   }
+//   li:last-of-type{
+//     border-right-width: 0;
+//   }
+//   li{
+//     display: inline-block;
+//     width: 25vw;
+//     border-width: 0 1px;
+//     border-color: black;
+//     border-style: solid;
+//     text-align: center;
+//     height: $font-size;
+//     vertical-align: middle;
+//     margin-top: 1vh;
+//     a{
+//       text-decoration: none;
+//       font-size: $font-size;
+//     }
+//   }
+// }
+//
+// main{
+//   position: relative;;
+//   z-index: -1;
+//   height: auto;
+//
+// }
+//
+// section{
+//   height: 100vh;
+//   width: 100vw;
+//   background-color: red;
+//   border-top: 1px solid black;
+//   position: relative;
+//   padding: $toolbar-height 0;
+//   .upper{
+//     width: 60%;
+//     position: absolute;
+//     top: $toolbar-height;
+//     right: 0;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     h2{
+//       font-size: 50px;
+//       margin: 20px;
+//       text-decoration: underline;
+//     }
+//     p{
+//       text-align: right;
+//       font-size: 28px;
+//       line-height: 1.5;
+//       float: right;
+//       margin: 20px 20px 0 0;
+//     }
+//     h4{
+//       margin: 20px;
+//       text-align: right;
+//       font-size: 30px;
+//       float: right;
+//     }
+//     ul{
+//       float: right;
+//       margin: 20px;
+//       a{
+//         text-decoration: none;
+//         color: black;
+//         font-size: 20px;
+//         text-align: right;
+//       }
+//       li{
+//         margin: 20px 0;
+//         text-align: right;
+//       }
+//     }
+//   }
+//   .lower{
+//     position: absolute;
+//     bottom: $toolbar-height;
+//     right: 0;
+//     left: 0;
+//     height: 125px;
+//     display: flex;
+//     justify-content: space-between;
+//     ul{
+//       text-align: right;
+//       height: inherit;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: space-around;
+//       margin-right: 10px;
+//       li{
+//         font-size: 20px;
+//       }
+//     }
+//     h1{
+//       font-size: 120px;
+//     }
+//   }
+// }
+//
+// footer{
+//   bottom: 0;
+//   @extend .fixed;
+//   p{
+//     text-align: center;
+//   }
+// }
+//
+//
+//
+//
+// #portfolio{
+//   display: flex;
+//   flex-flow: row;
+//   div{
+//     width: 50%;
+//     height: 50%;
+//   }
+//   .middle{
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     [class^=portfolio]{
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       justify-content: space-around;
+//       margin: 2%;
+//       height: 96%;
+//       width: 96%;
+//       background-color: white;
+//       border-radius: 15px;
+//     }
+//   }
+//   .lower{
+//     width: 100%;
+//   }
+// }
+//
+//
+// .slide{
+//   height: 100vh;
+//   width: 100vw;
+//   border: 1px solid black;
+//   border-width: 0 1px;
+// }
