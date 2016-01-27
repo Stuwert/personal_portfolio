@@ -1,63 +1,21 @@
 extends layout
 
 block content
-  header
-    nav 
-      ul
-        li
-          a(href='#home') Home
-        li
-          a(href='#about') About
-        li
-          a(href='#blog') Blog
-        li
-          a(href='#portfolio') Portfolio
-  footer
-    p Copyright Stuart Urback 2016.
   main#fullpage
-    section#home.section
-      div.lower
-        h1 Stuart Urback
-        ul
-          li Game Design
-          li Project Management
-          li Web development
-    section#about.section
-      div#about.slide
-        div.upper
-          h2 About Me
-          p Hi, I'm Stuart!
-          p I'm a Full Stack Developer/student with a variety of experience leading projects, developing websites 'front-end and server side', and doing design work.  I'm driven by my values and I look for relationships that will help me learn and grow.
-          p If you swipe right, you can find out more about my #[a(href='#values') values], #[a(href='#goals') goals], and #[a(href='#top10') top 10s].
-        div.lower
-      div#values.slide.active
-      div#top10.slide
-      div#goals.slide
-    section#blog.section
-      div.upper
-        h2 The Latest 
-        //- This will auto populate
-        h4 Title 
-        p Bing Bong
-      div.lower
-        p Writing is a key part of who I am.  Click to find out more about me.
-    section#portfolio.section
-      div.upper
-        h2 What I've Done
-        ul
-          li
-            a(href='#') Codepen
-          li
-            a(href='#') LinkedIn
-          li
-            a(href='#') Github
-      div.middle
-        each val in [1, 2, 3, 4]
-          div.holder
-            div(class='portfolio-#{val}')
-              img(src='http://placehold.it/40x40')
-              h4 Title
-              p Content
-        h4 Drag to Learn more
-      div.lower
-        div.holder.final
+    section.section
+      div.slide
+        p slide 1
+      div.slide
+        p slide 2
+      div.slide
+        P SLIDE 3
+      div.slide
+        p slide 4
+    section.section
+      p thing 2
+    section.section
+      p thing 3
+    section.section
+      p thing 4
+      
+      
